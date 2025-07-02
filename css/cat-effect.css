@@ -1,0 +1,14 @@
+.cat-emoji {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  animation: float-up 1s ease-out forwards;
+}
+
+@keyframes float-up {
+  0% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -100px); }
+}

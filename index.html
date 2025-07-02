@@ -139,7 +139,8 @@
   isHighlightShrink: false,
   isToc: false,
   pageType: 'home'
-}</script><style>
+}</script><link rel="stylesheet" href="/css/cat-effect.css">
+<script src="/js/cat-click.js"></script><style>
   /* 页脚背景 */
   footer {
     background: url(/images/preview.jpg) no-repeat center bottom/cover;
@@ -179,7 +180,28 @@
     100% { opacity: 0; }
   }
 </style>
-<meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background: [object Object];"></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Welcome~</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Welcome~</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/28/%E8%84%B1%E5%A3%B3/" title="脱壳">脱壳</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-28T11:33:59.000Z" title="发表于 2025-06-28 19:33:59">2025-06-28</time></span></div><div class="content">upx手动脱壳（适用于简单的没有经过魔改过的upx壳） X64X64dbg打开文件，进入界面后F9运行，点一下，看看跳转的界面中是否有push，一般点两下就会出现， 出现后F7步进push，  如果发现右上角只有rsp发生变化，那就说明这就是加壳地方， 转到它的内存窗口地址中，左下角的内存窗口就会发生改变，在灰色处设置断点， F9继续运行，跳转到pop处  在pop处你会发现下面两个循环，F8步进，会发现他在两个地址之间进行循环，跳不出去 此时第二个循环也就是大跳处地址名是E9，可以说明它就是oep入口 设置断点，F7步进， 然后就可以进行脱壳 上面例题是11.5考核十分钟 x3232位用x32打开 F9运行到pushad处  右上角esp，将内存地址转到这里，左下角的内存窗口出现一下 界面即为转成功  在灰色处下断点，F9运行到popad处  F8步入，其实你能发现下面已经有了两段跳和E9，明显的OEP入口标志F4到达jmp处后F7步进即可 最后出现这个界面即证明进入oep入口，脱壳即可  记得把带红×的给删除，下图是已经删过的  例题[HZNUCTF 2023...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/28/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-28T10:30:59.557Z" title="发表于 2025-06-28 18:30:59">2025-06-28</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">呆呆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Daidaidawang"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/28/%E8%84%B1%E5%A3%B3/" title="脱壳">脱壳</a><time datetime="2025-06-28T11:33:59.000Z" title="发表于 2025-06-28 19:33:59">2025-06-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/28/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-28T10:30:59.557Z" title="发表于 2025-06-28 18:30:59">2025-06-28</time></div></div></div></div><div class="card-widget card-archives">
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background: [object Object];"></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Welcome~</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Welcome~</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/28/%E8%84%B1%E5%A3%B3/" title="脱壳">脱壳</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-28T11:33:59.000Z" title="发表于 2025-06-28 19:33:59">2025-06-28</time></span></div><div class="content">upx手动脱壳（适用于简单的没有经过魔改过的upx壳） X64X64dbg打开文件，进入界面后F9运行，点一下，看看跳转的界面中是否有push，一般点两下就会出现， 出现后F7步进push，  如果发现右上角只有rsp发生变化，那就说明这就是加壳地方， 转到它的内存窗口地址中，左下角的内存窗口就会发生改变，在灰色处设置断点， F9继续运行，跳转到pop处  在pop处你会发现下面两个循环，F8步进，会发现他在两个地址之间进行循环，跳不出去 此时第二个循环也就是大跳处地址名是E9，可以说明它就是oep入口 设置断点，F7步进， 然后就可以进行脱壳 上面例题是11.5考核十分钟 x3232位用x32打开 F9运行到pushad处  右上角esp，将内存地址转到这里，左下角的内存窗口出现一下 界面即为转成功  在灰色处下断点，F9运行到popad处  F8步入，其实你能发现下面已经有了两段跳和E9，明显的OEP入口标志F4到达jmp处后F7步进即可 最后出现这个界面即证明进入oep入口，脱壳即可  记得把带红×的给删除，下图是已经删过的  例题[HZNUCTF 2023...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/06/28/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-28T10:30:59.557Z" title="发表于 2025-06-28 18:30:59">2025-06-28</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">呆呆</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Daidaidawang"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/28/%E8%84%B1%E5%A3%B3/" title="脱壳">脱壳</a><time datetime="2025-06-28T11:33:59.000Z" title="发表于 2025-06-28 19:33:59">2025-06-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/06/28/hello-world/" title="Hello World">Hello World</a><time datetime="2025-06-28T10:30:59.557Z" title="发表于 2025-06-28 18:30:59">2025-06-28</time></div></div></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -198,7 +220,53 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-07-02T13:34:31.806Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 呆呆</div><div class="footer_custom_text your-text-container">&#x1f41f;深海的祝福与你和我同在&#x1f41f;</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-07-02T14:50:16.276Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 呆呆</div><div class="footer_custom_text your-text-container">&#x1f41f;深海的祝福与你和我同在&#x1f41f;</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Welcome to daidai 's Home！(*^▽^*)！🐱","深海的祝福与你同在🐟🐟"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Welcome to daidai 's Home！(*^▽^*)！🐱","深海的祝福与你同在🐟🐟"])
+}
+typedJSFn.run(subtitleType)</script></div><script>
   // 文字逐个淡入逻辑 (独立运行)
   document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.your-text-container');
@@ -228,4 +296,4 @@
     });
   });
 </script>
-<script src="/js/cat-click.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
