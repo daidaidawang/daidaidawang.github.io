@@ -3309,6 +3309,15 @@ figure.highlight pre .javascript .function {
   width: auto;
   vertical-align: text-bottom;
 }
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url("/fonts/PressStart2P-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'Press Start 2P', monospace !important;
+}
 #page-header {
   position: relative;
   width: 100%;

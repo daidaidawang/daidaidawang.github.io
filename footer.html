@@ -1,0 +1,60 @@
+<script>
+// 高性能FPS计数器
+(() => {
+  // 创建显示容器
+  const container = document.createElement('div');
+  container.id = 'hexo-fps-counter';
+  container.style.cssText = `
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    z-index: 9999;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255,255,255,0.2);
+  `;
+
+  // 添加显示元素
+  container.innerHTML = `
+    <div>FPS: <span style="font-weight:bold">--</span></div>
+    <div style="font-size:12px;margin-top:4px">正在检测...</div>
+  `;
+  document.body.appendChild(container);
+
+  // FPS计算逻辑
+  const fpsValue = container.querySelector('span');
+  const fpsText = container.querySelector('div:last-child');
+  const frameTimes = [];
+  let lastTime = performance.now();
+
+  function updateFPS(now) {
+    const delta = now - lastTime;
+    lastTime = now;
+    
+    // 计算平均FPS
+    frameTimes.push(delta);
+    if (frameTimes.length > 30) frameTimes.shift();
+    const avg = frameTimes.reduce((a,b) => a+b) / frameTimes.length;
+    const fps = Math.round(1000 / avg);
+    
+    // 更新显示
+    fpsValue.textContent = fps;
+    fpsValue.style.color = fps >= 55 ? '#2ecc71' : 
+                         fps >= 30 ? '#f39c12' : '#e74c3c';
+    
+    fpsText.textContent = 
+      fps >= 55 ? '极流畅 | 动画如丝般顺滑' :
+      fps >= 30 ? '流畅 | 操作无延迟感' : 
+      '卡顿 | 影响体验';
+    
+    requestAnimationFrame(updateFPS);
+  }
+
+  requestAnimationFrame(updateFPS);
+})();
+</script>
