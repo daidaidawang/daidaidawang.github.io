@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 应用于全站所有常见元素 */
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, span, li, a, div, blockquote, code, pre,
+.site-title, .site-subtitle, .author-info-name,
+.menu-item, .item-name, .post-title, .post-meta,
+.sidebar, .tagcloud, .footer, .archive-title,
+.category-title, .comment-content, .pagination {
+  font-family: 'Press Start 2P', monospace !important;
+}
